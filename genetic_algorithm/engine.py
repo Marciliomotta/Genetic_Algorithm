@@ -12,7 +12,7 @@ class AlgoritmoGenetico:
         self.mutation_rate = mutation_rate
         self.elitism_rate = elitism_rate
         self.population = []
-        self.fitness_history = [] 
+        self.fitness_history = []
 
     def _inicializar_populacao(self):
         self.population = [self.factory.criar_aleatorio() for _ in range(self.pop_size)]
@@ -45,12 +45,11 @@ class AlgoritmoGenetico:
 
     def run(self) -> Tuple[Cronograma, List[int]]:
         self._inicializar_populacao()
-
         for geracao in range(self.generations):
             self.population.sort(key=lambda ind: ind.fitness, reverse=True)
             
             melhor_fitness = self.population[0].fitness
-            self.fitness_history.append(melhor_fitness) 
+            self.fitness_history.append(melhor_fitness)
             print(f"Geração {geracao + 1}/{self.generations} | Melhor Fitness: {melhor_fitness}")
 
             if melhor_fitness == 0:
