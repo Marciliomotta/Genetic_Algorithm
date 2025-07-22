@@ -43,7 +43,7 @@ O projeto foi estruturado em múltiplos arquivos para garantir a **separação d
 projeto_horarios/
 ├── main.py                 # Ponto de entrada, orquestra a execução
 ├── config.py               # Centraliza todos os dados e parâmetros
-├── graphic.py                  # <-- NOVO: Funções de visualização e exportação
+├── graphic.py              # Funções de visualização e exportação
 │
 ├── domain/
 │   └── models.py           # Define as classes do problema (Professor, Cronograma, etc.)
